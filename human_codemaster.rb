@@ -6,15 +6,30 @@ class HumanCodemaster
   end
 
   def create_pattern(code_pegs)
+    code_peg_colors = %w[R O Y G B V]
+
     puts 'Create a pattern for the codebreaker to guess.'
     input = gets.chomp.upcase
-    input_array = input.split('').map(&:to_i)
+    input_array = input.split('')
+    input_to_num = color_to_num(input_array, code_peg_colors)
 
-    until input_array.length == 4 &&
-          input_array.all? { |num| code_pegs.include?(num) }
+    until input_array.all? { |color| code_peg_colors.include?(color) } &&
+          input_to_num.length == 4 &&
+          input_to_num.all? { |num| code_pegs.include?(num) }
       puts 'Please enter a valid pattern.'
       input = gets.chomp.upcase
-      input_array = input.split('').map(&:to_i)
+      input_array = input.split('')
+      input_to_num = color_to_num(input_array, code_peg_colors)
+
+      p input_to_num
+    end
+  end
+
+  def color_to_num(colors, code_peg_colors)
+    colors.map do |color|
+      color_location = code_peg_colors.find_index(color)
+
+      color_location && color_location + 1
     end
   end
 end
