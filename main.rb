@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'decoding_board'
+require_relative 'human_codemaster'
 
 def intro
   code_pegs = [1, 2, 3, 4, 5, 6]
