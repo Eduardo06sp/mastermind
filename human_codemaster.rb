@@ -7,9 +7,13 @@ class HumanCodemaster
 
   def create_pattern(code_pegs)
     code_peg_colors = %w[R O Y G B V]
-
     puts 'Create a pattern for the codebreaker to guess.'
+
     input = gets.chomp.upcase
+    validate_pattern(input, code_pegs, code_peg_colors)
+  end
+
+  def validate_pattern(input, code_pegs, code_peg_colors)
     input_array = input.split('')
     input_to_num = color_to_num(input_array, code_peg_colors)
 
