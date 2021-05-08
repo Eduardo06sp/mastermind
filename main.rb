@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'decoding_board'
+
 def intro
   code_pegs = [1, 2, 3, 4, 5, 6]
 
