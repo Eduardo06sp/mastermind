@@ -5,10 +5,8 @@ require_relative 'decoding_board'
 require_relative 'human_codemaster'
 require_relative 'computer_codebreaker'
 
-def intro
-  code_pegs = [1, 2, 3, 4, 5, 6]
-  code_peg_colors = %w[R O Y G B V]
 
+def intro
   puts 'Welcome!'
   puts 'You may type in lower case throughout the game.'
   puts 'Would you like to be the codemaster or the codebreaker?'
@@ -18,6 +16,13 @@ def intro
     puts 'Please choose "codemaster" or "codebreaker."'
     input = gets.chomp.downcase
   end
+
+  start_new_match(input)
+end
+
+def start_new_match(input)
+  code_pegs = [1, 2, 3, 4, 5, 6]
+  code_peg_colors = %w[R O Y G B V]
 
   new_board = DecodingBoard.new
 

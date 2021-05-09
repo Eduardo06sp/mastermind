@@ -20,6 +20,25 @@ class Mastermind
     @current_round = 1
   end
 
+  def start_new_match(input)
+    code_pegs = [1, 2, 3, 4, 5, 6]
+    code_peg_colors = %w[R O Y G B V]
+
+    new_board = DecodingBoard.new
+
+    if input == 'codemaster'
+      codemaster = HumanCodemaster.new
+      codebreaker = ComputerCodebreaker.new(code_pegs)
+    else
+      codemaster = ComputerCodemaster.new
+      codebreaker = HumanCodebreaker.new
+    end
+
+    pattern = codemaster.create_pattern(code_pegs, code_peg_colors)
+    new_game = Mastermind.new(new_board, code_pegs, code_peg_colors, pattern, codemaster, codebreaker)
+    new_game.play_rounds
+  end
+
   def play_rounds
     end_game('codemaker') if current_round >= max_rounds
 
@@ -64,19 +83,7 @@ class Mastermind
         input = gets.chomp.downcase
       end
 
-      new_board = DecodingBoard.new
-
-      if input == 'codemaster'
-        codemaster = HumanCodemaster.new
-        codebreaker = ComputerCodebreaker.new(code_pegs)
-      else
-        codemaster = ComputerCodemaster.new
-        codebreaker = HumanCodebreaker.new
-      end
-
-      pattern = codemaster.create_pattern(code_pegs, code_peg_colors)
-      new_game = Mastermind.new(new_board, code_pegs, code_peg_colors, pattern, codemaster, codebreaker)
-      new_game.play_rounds
+      start_new_match(input)
     else
       puts 'Have a wonderful day! Thanks for playing. :}'
       exit
