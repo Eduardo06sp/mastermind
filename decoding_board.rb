@@ -10,7 +10,7 @@ class DecodingBoard
   end
 
   def add_round(round)
-    rounds.unshift(round)
+    rounds.push(round)
   end
 
   def display_board
