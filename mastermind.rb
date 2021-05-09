@@ -45,4 +45,41 @@ class Mastermind
 
     rematch
   end
+
+  def rematch
+    puts 'Rematch?'
+    input = gets.chomp.downcase
+
+    until %w[yes no y n].include?(input)
+      puts 'Please put yes/y/no/n.'
+      input = gets.chomp.downcase
+    end
+
+    if %w[yes y].include?(input)
+      puts 'Would you like to be the codemaster or codebreaker?'
+      input = gets.chomp.downcase
+
+      until %w[codemaster codebreaker].include?(input)
+        puts "Please enter 'codemaster' or 'codebreaker'."
+        input = gets.chomp.downcase
+      end
+
+      new_board = DecodingBoard.new
+
+      if input == 'codemaster'
+        codemaster = HumanCodemaster.new
+        codebreaker = ComputerCodebreaker.new(code_pegs)
+      else
+        codemaster = ComputerCodemaster.new
+        codebreaker = HumanCodebreaker.new
+      end
+
+      pattern = codemaster.create_pattern(code_pegs, code_peg_colors)
+      new_game = Mastermind.new(new_board, code_pegs, code_peg_colors, pattern, codemaster, codebreaker)
+      new_game.play_rounds
+    else
+      puts 'Have a wonderful day! Thanks for playing. :}'
+      exit
+    end
+  end
 end
