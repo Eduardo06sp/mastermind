@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'mastermind'
 require_relative 'decoding_board'
 require_relative 'human_codemaster'
 require_relative 'computer_codebreaker'
