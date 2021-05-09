@@ -5,9 +5,10 @@ require_relative 'game_interface'
 class Mastermind
   include GameInterface
 
-  def initialize(board, code_pegs, pattern, codemaster, codebreaker)
+  def initialize(board, code_pegs, code_peg_colors, pattern, codemaster, codebreaker)
     @board = board
     @code_pegs = code_pegs
+    @code_peg_colors = code_peg_colors
     @pattern = pattern
     @codemaster = codemaster
     @codebreaker = codebreaker

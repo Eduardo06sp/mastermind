@@ -30,7 +30,7 @@ def intro
   end
 
   pattern = codemaster.create_pattern(code_pegs, code_peg_colors)
-  new_game = Mastermind.new(new_board, code_pegs, pattern, codemaster, codebreaker)
+  new_game = Mastermind.new(new_board, code_pegs, code_peg_colors, pattern, codemaster, codebreaker)
   new_game.play_rounds
 end
 
