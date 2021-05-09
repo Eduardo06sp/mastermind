@@ -72,7 +72,12 @@ class Mastermind
     if winner == 'codebreaker'
       puts 'The codebreaker wins!'
     else
+      answer_array = pattern_to_colors(pattern)
+      answer_string = ''
+      answer_array.each { |color| answer_string += " #{color}" }
+
       puts 'The codemaster has won!'
+      puts "The correct pattern was:#{answer_string}"
     end
 
     rematch
