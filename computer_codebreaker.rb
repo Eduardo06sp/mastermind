@@ -23,5 +23,7 @@ class ComputerCodebreaker
       (feedback[:black] == simulated_feedback[:black]) &&
         (feedback[:white] == simulated_feedback[:white])
     end
+
+    guess
   end
 end
