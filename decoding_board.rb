@@ -5,7 +5,7 @@
 class DecodingBoard
   attr_accessor :rounds
 
-  def intialize
+  def initialize
     @rounds = []
   end
 
