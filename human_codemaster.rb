@@ -7,8 +7,7 @@ class HumanCodemaster
     @key_pegs = { black: 0, white: 0 }
   end
 
-  def create_pattern(code_pegs)
-    code_peg_colors = %w[R O Y G B V]
+  def create_pattern(code_pegs, code_peg_colors)
     puts 'Create a pattern for the codebreaker to guess.'
 
     input = gets.chomp.upcase

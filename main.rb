@@ -7,6 +7,7 @@ require_relative 'computer_codebreaker'
 
 def intro
   code_pegs = [1, 2, 3, 4, 5, 6]
+  code_peg_colors = %w[R O Y G B V]
 
   puts 'Welcome!'
   puts 'You may type in lower case throughout the game.'
@@ -28,7 +29,7 @@ def intro
     codebreaker = HumanCodebreaker.new
   end
 
-  pattern = codemaster.create_pattern(code_pegs)
+  pattern = codemaster.create_pattern(code_pegs, code_peg_colors)
   new_game = Mastermind.new(new_board, code_pegs, pattern, codemaster, codebreaker)
   new_game.play_rounds
 end
