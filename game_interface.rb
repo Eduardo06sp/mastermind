@@ -6,8 +6,8 @@ module GameInterface
 
     <<-HEREDOC
     --------------------------------------------------------------
-          Key Pegs                 Guess ##{current_round}
-      Black: #{feedback[:black]} White: #{feedback[:white]}         colors[0]   colors[1]   colors[2]   colors[3]
+                Key Pegs                 Guess ##{current_round}
+            Black: #{feedback[:black]}  White: #{feedback[:white]}         #{colors[0]}   #{colors[1]}   #{colors[2]}   #{colors[3]}
     --------------------------------------------------------------
     HEREDOC
   end
