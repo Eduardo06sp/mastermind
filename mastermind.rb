@@ -5,7 +5,7 @@ require_relative 'game_interface'
 class Mastermind
   include GameInterface
 
-  attr_reader :board, :code_peg_colors, :pattern, :codemaster, :codebreaker, :max_rounds
+  attr_reader :board, :code_pegs, :code_peg_colors, :pattern, :codemaster, :codebreaker, :max_rounds
   attr_accessor :current_round
 
   def initialize(board, code_pegs, code_peg_colors, pattern, codemaster, codebreaker)
@@ -42,7 +42,12 @@ class Mastermind
   def play_rounds
     end_game('codemaker') if current_round >= max_rounds
 
-    guess = codebreaker.make_guess(codemaster, pattern, current_round)
+    if codebreaker.class == 'ComputerCodebreaker'
+      guess = codebreaker.make_guess(codemaster, pattern, current_round)
+    else
+      guess = codebreaker.make_guess(code_pegs, code_peg_colors)
+    end
+
     feedback = codemaster.give_feedback(guess, pattern)
 
     board.add_round(display_round(feedback, guess, current_round))

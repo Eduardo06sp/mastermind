@@ -3,6 +3,7 @@
 require_relative 'mastermind'
 require_relative 'decoding_board'
 require_relative 'human_codemaster'
+require_relative 'human_codebreaker'
 require_relative 'computer_codemaster'
 require_relative 'computer_codebreaker'
 
