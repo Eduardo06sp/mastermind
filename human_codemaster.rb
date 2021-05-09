@@ -39,10 +39,10 @@ class HumanCodemaster
     end
   end
 
-  def give_feedback(guess)
+  def give_feedback(guess, pattern)
     reset_key_pegs
 
-    guess_remainder = guess
+    guess_remainder = guess.clone
     pattern.each_with_index do |pattern_slot, index|
       if pattern_slot == guess_remainder[index]
         guess_remainder[index] = nil
