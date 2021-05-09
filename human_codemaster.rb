@@ -28,6 +28,8 @@ class HumanCodemaster
 
       p input_to_num
     end
+
+    input_to_num
   end
 
   def color_to_num(colors, code_peg_colors)
