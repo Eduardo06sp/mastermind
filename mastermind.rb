@@ -42,7 +42,7 @@ class Mastermind
   def play_rounds
     end_game('codemaker') if current_round >= max_rounds
 
-    if codebreaker.class == 'ComputerCodebreaker'
+    if codebreaker.instance_of?(ComputerCodebreaker)
       guess = codebreaker.make_guess(codemaster, pattern, current_round)
     else
       guess = codebreaker.make_guess(code_pegs, code_peg_colors)
