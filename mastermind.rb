@@ -48,11 +48,11 @@ class Mastermind
   def play_rounds
     end_game('codemaker') if current_round > max_rounds
 
-    if codebreaker.instance_of?(ComputerCodebreaker)
-      guess = codebreaker.make_guess(codemaster, pattern, current_round)
-    else
-      guess = codebreaker.make_guess(code_pegs, code_peg_colors)
-    end
+    guess = if codebreaker.instance_of?(ComputerCodebreaker)
+              codebreaker.make_guess(codemaster, pattern, current_round)
+            else
+              codebreaker.make_guess(code_pegs, code_peg_colors)
+            end
 
     feedback = codemaster.give_feedback(guess, pattern)
 
