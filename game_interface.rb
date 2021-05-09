@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
 module GameInterface
+
+  def display_round_header(current_round)
+    <<-HEREDOC
+    --------------------------------------------------------------
+                               ROUND #{current_round}
+    HEREDOC
+  end
+
   def display_round(feedback, guess, current_round)
     colors = pattern_to_colors(guess)
 

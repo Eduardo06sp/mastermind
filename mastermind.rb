@@ -27,6 +27,8 @@ class Mastermind
     feedback = codemaster.give_feedback(guess, pattern)
 
     board.add_round(display_round(feedback, guess, current_round))
+    puts display_round_header(current_round)
+    board.display_board
     self.current_round += 1
     play_rounds
   end
