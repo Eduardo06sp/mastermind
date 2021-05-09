@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'human_codemaster'
+
 class ComputerCodemaster < HumanCodemaster
   def create_pattern(code_pegs, _colors)
     pattern = []
