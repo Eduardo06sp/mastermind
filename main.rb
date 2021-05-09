@@ -2,6 +2,7 @@
 
 require_relative 'decoding_board'
 require_relative 'human_codemaster'
+require_relative 'computer_codebreaker'
 
 def intro
   code_pegs = [1, 2, 3, 4, 5, 6]
@@ -20,7 +21,7 @@ def intro
 
   if input == 'codemaster'
     codemaster = HumanCodemaster.new
-    codebreaker = ComputerCodebreaker.new
+    codebreaker = ComputerCodebreaker.new(code_pegs)
   else
     codemaster = ComputerCodemaster.new
     codebreaker = HumanCodebreaker.new
