@@ -32,8 +32,6 @@ class HumanCodemaster
       input = gets.chomp.upcase
       input_array = input.split('')
       input_to_num = color_to_num(input_array, code_peg_colors)
-
-      p input_to_num
     end
 
     input_to_num
