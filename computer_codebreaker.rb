@@ -1,5 +1,13 @@
 # frozen_string_literal: true
 
+# ComputerCodebreaker is an implementation of the Mindmaster algorithm by Swaszek
+# A list of possible solutions is created
+#
+# Then the list of possible solutions is reduced by simulating plays,
+# eliminating possibilities that would not yield the same number of key pegs
+#
+# The first guess is [1, 1, 2, 2]
+# Then subsequent guesses are the first possibility from the remaining solutions
 class ComputerCodebreaker
   attr_accessor :possible_solutions
 
