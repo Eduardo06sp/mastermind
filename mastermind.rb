@@ -29,7 +29,20 @@ class Mastermind
     board.add_round(display_round(feedback, guess, current_round))
     puts display_round_header(current_round)
     board.display_board
+
+    end_game('codebreaker') if feedback[:black] == 4
+
     self.current_round += 1
     play_rounds
+  end
+
+  def end_game(winner)
+    if winner == 'codebreaker'
+      puts 'The codebreaker wins!'
+    else
+      puts 'The codemaster has won!'
+    end
+
+    rematch
   end
 end
