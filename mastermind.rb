@@ -5,7 +5,7 @@ require_relative 'game_interface'
 class Mastermind
   include GameInterface
 
-  attr_reader :pattern, :codemaster, :codebreaker, :max_rounds
+  attr_reader :board, :code_peg_colors, :pattern, :codemaster, :codebreaker, :max_rounds
   attr_accessor :current_round
 
   def initialize(board, code_pegs, code_peg_colors, pattern, codemaster, codebreaker)
