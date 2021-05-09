@@ -3,6 +3,8 @@
 # DecodingBoard initiates with an empty array
 # It stores the results of rounds being played
 class DecodingBoard
+  attr_accessor :rounds
+
   def intialize
     @rounds = []
   end
