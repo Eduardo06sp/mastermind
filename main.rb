@@ -7,7 +7,6 @@ require_relative 'human_codebreaker'
 require_relative 'computer_codemaster'
 require_relative 'computer_codebreaker'
 
-
 def intro
   puts 'Welcome!'
   puts 'You may type in lower case throughout the game.'
