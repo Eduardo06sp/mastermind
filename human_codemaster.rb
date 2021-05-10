@@ -1,5 +1,11 @@
 # frozen_string_literal: true
 
+# HumanCodemaster contains methods to create (and validate) patterns,
+# display valid code pegs for the user to choose from,
+# and convert inputted colors to numbers (1-6) for the program to process.
+#
+# It also gives feedback which checks each guess and
+# returns a hash of black and white key pegs.
 class HumanCodemaster
   attr_accessor :key_pegs
 
