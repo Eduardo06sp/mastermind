@@ -20,3 +20,11 @@ How To Play:
   * White key pegs are also represented in text
     * They indicate the number of code pegs that are the correct color in the _wrong_ spot
   * You can only win if you guess the correct colors in the correct spot (i.e. get 4 black key pegs) within 12 attempts
+
+Some of the techniques I learned include:
+* Designing with **object-oriented programming** in mind
+* Separating classes / modules into different classes for **code organization**
+* Adding top-level **documentation** for each class / module
+* Using **inheritance** to avoid duplicating code
+* Using **heredocs** to display terminal interface and prevent cluttery code
+* Creating **private methods** to prevent oversharing of classes
