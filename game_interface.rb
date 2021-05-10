@@ -7,6 +7,8 @@
 # instead these methods are used to add onto the DecodingBoard's
 # rounds array, the class which outputs all rounds to the terminal
 module GameInterface
+  private
+
   def display_round_header(current_round)
     <<-HEREDOC
     --------------------------------------------------------------
