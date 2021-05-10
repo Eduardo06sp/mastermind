@@ -9,13 +9,13 @@ class HumanCodemaster
 
   def create_pattern(code_pegs, code_peg_colors)
     puts 'Create a pattern for the codebreaker to guess.'
-    display_valid_code_pegs(code_pegs, code_peg_colors)
+    display_valid_code_pegs(code_peg_colors)
 
     input = gets.chomp.upcase
     validate_pattern(input, code_pegs, code_peg_colors)
   end
 
-  def display_valid_code_pegs(code_pegs, colors)
+  def display_valid_code_pegs(colors)
     valid_code_pegs = ''
     colors.each { |color| valid_code_pegs += " #{color}" }
     puts "Valid code pegs:#{valid_code_pegs}"
