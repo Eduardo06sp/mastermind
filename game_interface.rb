@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 
+# GameInterface contains the methods that generate
+# what will be displayed in the terminal
+#
+# It does not actually output it to the terminal,
+# instead these methods are used to add onto the DecodingBoard's
+# rounds array, the class which outputs all rounds to the terminal
 module GameInterface
-
   def display_round_header(current_round)
     <<-HEREDOC
     --------------------------------------------------------------
