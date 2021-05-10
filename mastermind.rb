@@ -2,6 +2,8 @@
 
 require_relative 'game_interface'
 
+# Mastermind holds the structure of the game and keeps track of necessary game elements.
+# It creates new matches, ends them and rematches if the user desires so.
 class Mastermind
   include GameInterface
 
