@@ -9,7 +9,7 @@ Rules:
 * The pattern (i.e. the answer) must be 4 letters long
 
 How To Play:
-* [Here is a wikiHow article explaining it with the help of pictures.](https://www.wikihow.com/Play-Mastermind)
+* [Here is a wikiHow article explaining it with the help of pictures](https://www.wikihow.com/Play-Mastermind)
 * Lowercase letters are allowed
 * If you are codemaster
   * Type in a 4-letter pattern for the computer to guess
