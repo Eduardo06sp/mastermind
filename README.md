@@ -7,6 +7,7 @@ Rules:
 * The possible code pegs are: R O Y G B V
   * These letters represent the colors of the rainbow for ease of use / rememberance (with the exception of indigo)
 * The pattern (i.e. the answer) must be 4 letters long
+* Duplicates in the pattern are allowed
 
 How To Play:
 * [Here is a wikiHow article explaining it with the help of pictures](https://www.wikihow.com/Play-Mastermind)
